@@ -1,0 +1,11 @@
+html, body {
+    background-image: url('background-texture.png');
+    background-size: 100px;
+    background-position: 50% 50%;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: $white;
+}

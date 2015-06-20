@@ -1,0 +1,42 @@
+header {
+    padding-top: 2rem;
+}
+
+.header--title a {
+    display: block;
+    padding: 0 3.5rem;
+}
+
+.header--image {
+    margin: 0 auto;
+}
+
+.header--nav {
+    background-color: $siteBrown;
+}
+
+.nav--container {
+    list-style-type: none;
+    @include flexbox();
+    @include flexbox-align-items(center);
+    @include flexbox-justify-content(space-between);
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+    max-width: 600px;
+}
+
+.nav--container a {
+    display: block;
+    width: 25%;
+}
+
+.nav--container_link {
+    text-align: center;
+    color: $white;
+    font-size: (20rem/16);
+}
+
+.nav--container_link:hover {
+    color: $siteGrey;
+}

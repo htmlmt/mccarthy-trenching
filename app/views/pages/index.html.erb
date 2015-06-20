@@ -1,0 +1,80 @@
+<div class="wrapper">
+    <header class="body--header">
+        <div class="header--title">
+            <a href="/">
+                <h1>McCarthy Trenching</h1>
+            </a>
+        </div>
+        <nav class="header--nav">
+            <ul class="nav--container">
+                <a href="/shows">
+                    <li class="nav--container_link">
+                        <em>Shows</em>
+                    </li>
+                </a>
+                <a href="/news">
+                    <li class="nav--container_link">
+                        <em>News</em>
+                    </li>
+                </a>
+                <a href="/songs">
+                    <li class="nav--container_link">
+                        <em>Songs</em>
+                    </li>
+                </a>
+                <a href="/albums">
+                    <li class="nav--container_link">
+                        <em>Albums</em>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+        <div class="header--image">
+            <%= image_tag('header.jpg') %>
+        </div>
+    </header>
+    <main class="body--main">
+        <section class="main--shows">
+            <header class="shows--header">
+                <h2>
+                    SHOWS
+                </h2>
+            </header>
+            <% if @shows != nil %>
+                <div class="shows--container">
+                    <% @shows.each do |show| %>
+                        <div class="shows--container_show">
+                            <h3>
+                                <%= show.description %>
+                            </h3>
+                            <p>
+                                <%= show.date.strftime("%A, %B %e, at %l:%M %P") %>
+                            </p>
+                        </div>
+                    <% end %>
+                </div>
+            <% end %>
+        </section>
+        <section class="main--news">
+            <header class="news--header">
+                <h2>
+                    NEWS
+                </h2>
+            </header>
+        </section>
+        <section class="main--songs">
+            <header class="songs--header">
+                <h2>
+                    SONGS
+                </h2>
+            </header>
+        </section>
+        <section class="main--albums">
+            <header class="albums--header">
+                <h2>
+                    ALBUMS
+                </h2>
+            </header>
+        </section>
+    </main>
+</div>

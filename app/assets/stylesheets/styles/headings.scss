@@ -1,0 +1,22 @@
+h1 {
+    font-size: (50rem/16);
+    text-align: center;
+    color: $siteBrown;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: (25rem/16);
+    color: $siteBrown;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: .1rem solid #d7d7d7;
+    border-bottom: .1rem solid #d7d7d7;
+}
+
+h3 {
+    color: $siteBrown;
+    font-weight: bold;
+    font-size: (25rem/16);
+}
