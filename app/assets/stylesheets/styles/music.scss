@@ -1,25 +1,26 @@
-.main--shows {
+.main--music {
     @include flexbox();
     @include flexbox-align-items(center);
     @include flexbox-justify-content(center);
     position: relative;
 }
 
-.shows--header, .shows--content {
+.music--header, .music--content {
     width: 50%;
     position: relative;
 }
 
-.shows--container {
-    padding: 0 3.5rem;
-}
-
-.shows--header {
+.music--header {
+    background-color: $siteBlack;
     left: 0;
 }
 
-.shows--header h2 {
-    color: $siteBlue;
+.music--content {
+    padding: 5rem 3rem;
+    margin-left: auto;
+}
+
+.music--header h2 {
     @include transform-translate(0, -50%);
     position: absolute;
     top: 50%;
@@ -28,13 +29,7 @@
     margin: 0 auto;
 }
 
-.shows--content {
-    background-color: $siteBrown;
-    margin-left: auto;
-    padding: 5rem 3rem;
-}
-
-.shows--nav {
+.music--nav {
     list-style-type: none;
     @include flexbox();
     @include flexbox-align-items(center);
@@ -47,8 +42,4 @@
     bottom: 2rem;
     left: 0;
     right: 0;
-}
-
-.shows--nav li {
-    color: $siteBlue;
 }

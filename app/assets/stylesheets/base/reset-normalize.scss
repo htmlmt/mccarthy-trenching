@@ -352,9 +352,10 @@ strong a {
 hr {
 	display: block;
 	padding: 0;
-	height: 1px;
+	height: 2px;
 	border: 0;
-	background-color: $siteGrey;
+    margin: 2rem 0;
+	background-color: $white;
 }
 
 img {

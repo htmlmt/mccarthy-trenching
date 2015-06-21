@@ -1,12 +1,14 @@
 // ---- ---- ---- ---- VARIABLES ---- ---- ---- ----
 
 // Site Colors
-$siteBlue: #384948;
+$siteBlue: #46657a;
 $siteDarkBlue: #0C4C70;
 $siteGrey: #a0a0a0;
 $siteLightGrey: #a0a0a0;
-$siteGreen: #578280;
-$siteBrown: #69483c;
+$siteGreen: #7acea7;
+$siteBrown: #6e5545;
+$siteGold: #c6bd77;
+$siteBlack: #2b2b2b;
 
 $largeMobileBreakpoint: 29.5em; 	// <472px
 $smallTabletBreakpoint: 800px; 	// <592px
@@ -33,7 +35,7 @@ $warningColor: red;
 $textFontSize: 1em;
 
 // Typography
-$baseFont: 'Libre Baskerville', serif;
+$baseFont: 'Playfair Display', serif;
 $baseFontSize: 100%;
 $baselineHeight: 1.35em;
 $baseFontWeight: 300;

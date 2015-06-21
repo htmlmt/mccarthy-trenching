@@ -1,3 +1,15 @@
+.body--header {
+    position: relative;
+}
+
+.header--title {
+    position: absolute;
+    top: 75px;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+}
+
 .header--title a {
     display: block;
     padding: 2rem 3.5rem;
@@ -5,10 +17,18 @@
 
 .header--image {
     margin: 0 auto;
+    max-width: 790px;
+    position: absolute;
+    bottom: 55px;
+    left: 0;
+    right: 0;
 }
 
 .header--nav {
     background-color: $siteBrown;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .nav--container {
@@ -19,7 +39,7 @@
     margin: 0 auto;
     padding: 0;
     width: 80%;
-    max-width: 600px;
+    max-width: 300px;
 }
 
 .nav--container a {
@@ -30,7 +50,9 @@
 .nav--container_link {
     text-align: center;
     color: $white;
-    font-size: (20rem/16);
+    font-size: (30rem/16);
+    transition-duration: .25s;
+    font-family: 'Dancing Script';
 }
 
 .nav--container_link:hover {

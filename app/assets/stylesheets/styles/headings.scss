@@ -1,23 +1,31 @@
 h1 {
-    font-size: (50rem/16);
+    font-size: 4.375rem;
     text-align: center;
-    color: $siteBrown;
-    font-weight: bold;
+    color: $siteBlack;
     margin: 0;
+    font-family: "hwt-american-shopworn";
+}
+
+h1 span {
+    font-size: 3.5rem;
 }
 
 h2 {
-    font-size: (25rem/16);
-    color: $siteBrown;
+    font-size: (38rem/16);
+    font-family: "hwt-american-shopworn";
+    color: $white;
     font-weight: bold;
     text-align: center;
     padding: 1rem 0;
-    border-top: .1rem solid #d7d7d7;
-    border-bottom: .1rem solid #d7d7d7;
 }
 
 h3 {
-    color: $siteBrown;
-    font-weight: bold;
-    font-size: (25rem/16);
+    color: $white;
+    font-size: (42rem/16);
+    font-family: 'Dancing Script';
+}
+
+p {
+    color: $white;
+    line-height: (24rem/16);
 }

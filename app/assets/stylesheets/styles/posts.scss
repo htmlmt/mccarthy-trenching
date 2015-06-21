@@ -1,3 +1,46 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.main--news {
+    @include flexbox();
+    @include flexbox-align-items(flex-start);
+    @include flexbox-justify-content(center);
+    position: relative;
+}
+
+.news--header, .news--content {
+    width: 50%;
+}
+
+.news--header {
+    background-color: $siteBlue;
+    position: relative;
+    left: 0;
+}
+
+.news--header h2 {
+    @include transform-translate(0, -50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.news--content {
+    background-color: $siteBlack;
+    margin-left: auto;
+    padding: 5rem 3rem;
+}
+
+.news--nav {
+    list-style-type: none;
+    @include flexbox();
+    @include flexbox-align-items(center);
+    @include flexbox-justify-content(space-between);
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+    max-width: 300px;
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+}

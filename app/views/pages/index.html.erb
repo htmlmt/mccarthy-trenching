@@ -2,48 +2,130 @@
     <header class="body--header">
         <div class="header--title">
             <a href="/">
-                <h1>McCarthy Trenching</h1>
+                <h1>
+                    M<span>c</span>C<span>arthy</span><br> T<span>renching</span>
+                </h1>
             </a>
+        </div>
+        <div class="header--image">
+            <%= image_tag('header.jpg') %>
         </div>
         <nav class="header--nav">
             <ul class="nav--container">
-                <a href="/shows">
-                    <li class="nav--container_link">
-                        <em>Shows</em>
-                    </li>
-                </a>
                 <a href="/news">
                     <li class="nav--container_link">
-                        <em>News</em>
+                        news
                     </li>
                 </a>
-                <a href="/songs">
+                <a href="/shows">
                     <li class="nav--container_link">
-                        <em>Songs</em>
+                        shows
                     </li>
                 </a>
-                <a href="/albums">
+                <a href="/music">
                     <li class="nav--container_link">
-                        <em>Albums</em>
+                        music
                     </li>
                 </a>
             </ul>
         </nav>
-        <div class="header--image">
-            <%= image_tag('header.jpg') %>
-        </div>
     </header>
     <main class="body--main">
+        <section class="main--news">
+            <header class="news--header section--header">
+                <h2>
+                    NEWS
+                </h2>
+                <ul class="news--nav">
+                    <a href="/news">
+                        <li class="nav--container_link">
+                            news
+                        </li>
+                    </a>
+                    <a href="/shows">
+                        <li class="nav--container_link">
+                            shows
+                        </li>
+                    </a>
+                    <a href="/music">
+                        <li class="nav--container_link">
+                            music
+                        </li>
+                    </a>
+                </ul>
+            </header>
+            <section class="news--content">
+                <div class="news--content_post">
+                    <h3>
+                        More Like It
+                    </h3>
+                    <p>
+                        Good golly, Miss Molly. This October, Sower Records releases “More Like It,” an album called “humanity’s best” by not one but everyone.
+                    </p>
+                    <p>
+                        President Obama said he plans to celebrate by reinstating the space shuttle program.
+                    </p>
+                    <p>
+                        <em>posted August 12, 2015</em>
+                    </p>
+                </div>
+                <hr>
+                <div class="news--content_post">
+                    <h3>
+                        Sponsored by Evian
+                    </h3>
+                    <p>
+                        McCarthy Trenching is pleased to announce our very first sponsor. Purveyors of the finest French water around, Evian can put some spunk in your step, and also keep you alive and also make you feel fancy. Who knows how, but we trust their expertise.
+                    </p>
+                    <p>
+                        <em>posted August 10, 2015</em>
+                    </p>
+                </div>
+                <hr>
+                <div class="news--content_post">
+                    <h3>
+                        More Like It
+                    </h3>
+                    <p>
+                        Good golly, Miss Molly. This October, Sower Records releases “More Like It,” an album called “humanity’s best” by not one but everyone.
+                    </p>
+                    <p>
+                        President Obama said he plans to celebrate by reinstating the space shuttle program.
+                    </p>
+                    <p>
+                        <em>posted August 12, 2015</em>
+                    </p>
+                </div>
+                <hr>
+            </section>
+        </section>
         <section class="main--shows">
-            <header class="shows--header">
+            <header class="shows--header section--header">
                 <h2>
                     SHOWS
                 </h2>
+                <ul class="shows--nav">
+                    <a href="/news">
+                        <li class="nav--container_link">
+                            news
+                        </li>
+                    </a>
+                    <a href="/shows">
+                        <li class="nav--container_link">
+                            shows
+                        </li>
+                    </a>
+                    <a href="/music">
+                        <li class="nav--container_link">
+                            music
+                        </li>
+                    </a>
+                </ul>
             </header>
             <% if @shows != nil %>
-                <div class="shows--container">
+                <div class="shows--content">
                     <% @shows.each do |show| %>
-                        <div class="shows--container_show">
+                        <div class="shows--content_show">
                             <h3>
                                 <%= show.description %>
                             </h3>
@@ -55,26 +137,32 @@
                 </div>
             <% end %>
         </section>
-        <section class="main--news">
-            <header class="news--header">
+        <section class="main--music">
+            <header class="music--header section--header">
                 <h2>
-                    NEWS
+                    MUSIC
                 </h2>
+                <ul class="music--nav">
+                    <a href="/news">
+                        <li class="nav--container_link">
+                            news
+                        </li>
+                    </a>
+                    <a href="/shows">
+                        <li class="nav--container_link">
+                            shows
+                        </li>
+                    </a>
+                    <a href="/music">
+                        <li class="nav--container_link">
+                            music
+                        </li>
+                    </a>
+                </ul>
             </header>
-        </section>
-        <section class="main--songs">
-            <header class="songs--header">
-                <h2>
-                    SONGS
-                </h2>
-            </header>
-        </section>
-        <section class="main--albums">
-            <header class="albums--header">
-                <h2>
-                    ALBUMS
-                </h2>
-            </header>
+            <div class="music--content">
+                
+            </div>
         </section>
     </main>
 </div>
