@@ -31,7 +31,7 @@ gem 'unicorn'
 
 gem 'griddler'
 
-gem 'griddler-mandrill'
+gem 'griddler-sendgrid'
 
 gem 'pry-remote'
 
