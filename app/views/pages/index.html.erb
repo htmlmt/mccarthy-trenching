@@ -64,7 +64,7 @@
                             <%= post.body %>
                         </p> 
                         <p>
-                            <em>posted <%= post.created_at.strftime("A, %B %e")%></em>
+                            <em>posted <%= post.created_at.strftime("%B %e, %Y")%></em>
                         </p>
                     </div>
                     <% unless @posts.length == index + 1 %>
