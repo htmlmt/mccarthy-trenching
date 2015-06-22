@@ -56,19 +56,20 @@
             </header>
             <section class="news--content">
                 <%= @posts.each_with_index do |post, index| %>
-                <div class="news--content_post">
-                    <h3>
-                        <%= post.headline %>
-                    </h3>
-                    <p>
-                        <%= post.body %>
-                    </p> 
-                    <p>
-                        <em>posted <%= post.created_at.strftime("A, %B %e")%></em>
-                    </p>
-                </div>
-                <% unless @posts.length == index + 1 %>
-                <hr>
+                    <div class="news--content_post">
+                        <h3>
+                            <%= post.headline %>
+                        </h3>
+                        <p>
+                            <%= post.body %>
+                        </p> 
+                        <p>
+                            <em>posted <%= post.created_at.strftime("A, %B %e")%></em>
+                        </p>
+                    </div>
+                    <% unless @posts.length == index + 1 %>
+                    <hr>
+                    <% end %>
                 <% end %>
             </section>
         </section>
