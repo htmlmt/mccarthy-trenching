@@ -3,5 +3,8 @@ def initialize(email)
 end
 
 def process
-  Post.create!({ headline: @email.subject, body: @email.body })
+  Post.create!(
+    headline: @email.subject,
+    body: @email.body
+  )
 end
