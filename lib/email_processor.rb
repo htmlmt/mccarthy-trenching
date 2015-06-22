@@ -10,7 +10,7 @@ class EmailProcessor
     # here's an example of model creation
     Post.create!(
       headline: @email.subject,
-      body: @email.body
+      body: @email.text
     )
   end
 end
