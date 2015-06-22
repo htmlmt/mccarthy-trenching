@@ -33,6 +33,8 @@ gem 'griddler'
 
 gem 'griddler-sendgrid'
 
+gem 'pry-remote'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
