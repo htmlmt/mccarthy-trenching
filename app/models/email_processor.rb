@@ -4,7 +4,7 @@ class EmailProcessor
   end
 
   def process
-    if @email.to == editlast@mctrenching.com
+    if @email.to == "editlast@mctrenching.com"
       @post = Post.last
       @post.update(
         headline: @email.subject,
