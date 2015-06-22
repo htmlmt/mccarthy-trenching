@@ -62,6 +62,12 @@ GEM
     execjs (2.5.2)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    griddler (1.2.0)
+      htmlentities
+      rails (>= 3.2.0)
+    griddler-sendgrid (0.0.1)
+      griddler
+    htmlentities (4.3.3)
     i18n (0.7.0)
     jbuilder (2.3.0)
       activesupport (>= 3.0.0, < 5)
@@ -158,6 +164,8 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   debugger
   dotenv-rails
+  griddler
+  griddler-sendgrid
   jbuilder (~> 2.0)
   jquery-rails
   pg

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :shows
   root 'pages#index'
+  post '/email_processor' => 'griddler/emails#create'
   resources :concerts
   resources :posts
 end
