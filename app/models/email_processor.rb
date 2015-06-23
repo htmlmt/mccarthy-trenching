@@ -4,7 +4,7 @@ class EmailProcessor
   end
 
   def process
-    to_address = @email.to[:email]
+    to_address = @email.to.email
     if to_address == "lastnews@mctrenching.com"
       @post = Post.last
       @post.update(
