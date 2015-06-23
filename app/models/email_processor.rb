@@ -9,7 +9,7 @@ class EmailProcessor
       @post = Post.last
       @post.update(
         headline: @email.subject,
-        body: @email.body
+        body: @email.raw_body
       )
     elsif to_address == "lastshow@mctrenching.com"
       @show = Show.last
@@ -20,7 +20,7 @@ class EmailProcessor
     elsif to_address == "news@mctrenching.com"
       Post.create!(
         headline: @email.subject,
-        body: @email.body
+        body: @email.raw_body
       )
     elsif to_address == "shows@mctrenching.com"
       Show.create!(
