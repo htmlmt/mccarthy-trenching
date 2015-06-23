@@ -5,9 +5,9 @@ class EmailProcessor
 
   def process
     Post.create!(
-      headline: @email.to[:email]
+      headline: @email.to[0][:email]
     )
-    if @email.to[:email] == "lastnews@mctrenching.com"
+    if @email.to[0][:email] == "lastnews@mctrenching.com"
       @post = Post.last
       @post.update(
         headline: @email.subject,
