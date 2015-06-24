@@ -12,21 +12,15 @@
         </div>
         <nav class="header--nav">
             <ul class="nav--container">
-                <a href="/news">
-                    <li class="nav--container_link">
-                        news
-                    </li>
-                </a>
-                <a href="/shows">
-                    <li class="nav--container_link">
-                        shows
-                    </li>
-                </a>
-                <a href="/music">
-                    <li class="nav--container_link">
-                        music
-                    </li>
-                </a>
+                <li class="nav--container_link">
+                    news
+                </li>
+                <li class="nav--container_link">
+                    shows
+                </li>
+                <li class="nav--container_link">
+                    music
+                </li>
             </ul>
         </nav>
     </header>
@@ -37,21 +31,15 @@
                     NEWS
                 </h2>
                 <ul class="news--nav">
-                    <a href="/news">
-                        <li class="nav--container_link">
-                            news
-                        </li>
-                    </a>
-                    <a href="/shows">
-                        <li class="nav--container_link">
-                            shows
-                        </li>
-                    </a>
-                    <a href="/music">
-                        <li class="nav--container_link">
-                            music
-                        </li>
-                    </a>
+                    <li class="nav--container_link">
+                        news
+                    </li>
+                    <li class="nav--container_link">
+                        shows
+                    </li>
+                    <li class="nav--container_link">
+                        music
+                    </li>
                 </ul>
             </header>
             <section class="news--content">
@@ -79,21 +67,15 @@
                     SHOWS
                 </h2>
                 <ul class="shows--nav">
-                    <a href="/news">
-                        <li class="nav--container_link">
-                            news
-                        </li>
-                    </a>
-                    <a href="/shows">
-                        <li class="nav--container_link">
-                            shows
-                        </li>
-                    </a>
-                    <a href="/music">
-                        <li class="nav--container_link">
-                            music
-                        </li>
-                    </a>
+                    <li class="nav--container_link">
+                        news
+                    </li>
+                    <li class="nav--container_link">
+                        shows
+                    </li>
+                    <li class="nav--container_link">
+                        music
+                    </li>
                 </ul>
             </header>
             <% if @shows != nil %>
@@ -101,10 +83,10 @@
                     <% @shows.each do |show| %>
                         <div class="shows--content_show">
                             <h3>
-                                <%= show.description %>
+                                <%= show.date.strftime("%A, %B %e, at %l:%M %P") %>
                             </h3>
                             <p>
-                                <%= show.date.strftime("%A, %B %e, at %l:%M %P") %>
+                                <%= show.description %>
                             </p>
                         </div>
                     <% end %>
@@ -117,21 +99,15 @@
                     MUSIC
                 </h2>
                 <ul class="music--nav">
-                    <a href="/news">
-                        <li class="nav--container_link">
-                            news
-                        </li>
-                    </a>
-                    <a href="/shows">
-                        <li class="nav--container_link">
-                            shows
-                        </li>
-                    </a>
-                    <a href="/music">
-                        <li class="nav--container_link">
-                            music
-                        </li>
-                    </a>
+                    <li class="nav--container_link">
+                        news
+                    </li>
+                    <li class="nav--container_link">
+                        shows
+                    </li>
+                    <li class="nav--container_link">
+                        music
+                    </li>
                 </ul>
             </header>
             <div class="music--content">
