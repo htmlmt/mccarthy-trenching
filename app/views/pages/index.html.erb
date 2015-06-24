@@ -49,8 +49,8 @@
                             <%= post.headline %>
                         </h3>
                         <p>
-                            <%= sanitize post.body %>
-                        </p> 
+                            <%= simple_format(post.body) %>
+                        </p>
                         <p>
                             <em>posted <%= post.created_at.strftime("%B %e, %Y")%></em>
                         </p>
