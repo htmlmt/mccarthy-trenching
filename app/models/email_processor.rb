@@ -9,23 +9,23 @@ class EmailProcessor
       @post = Post.last
       @post.update(
         headline: @email.subject,
-        body: @email.raw_html
+        body: @email.raw_body
       )
     elsif to_address == "lastshow@mctrenching.com"
       @show = Show.last
       @show.update(
         date: DateTime.parse(@email.subject),
-        description: @email.raw_html
+        description: @email.raw_body
       )
     elsif to_address == "news@mctrenching.com"
       Post.create!(
         headline: @email.subject,
-        body: @email.raw_html
+        body: @email.raw_body
       )
     elsif to_address == "shows@mctrenching.com"
       Show.create!(
         date: DateTime.parse(@email.subject),
-        description: @email.raw_html
+        description: @email.raw_body
       )
     else
       
