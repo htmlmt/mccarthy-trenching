@@ -61,7 +61,7 @@
                             <%= post.headline %>
                         </h3>
                         <p>
-                            <%= post.body %>
+                            <%= sanitize post.body %>
                         </p> 
                         <p>
                             <em>posted <%= post.created_at.strftime("%B %e, %Y")%></em>
