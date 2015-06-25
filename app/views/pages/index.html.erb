@@ -49,7 +49,7 @@
                             <%= post.headline %>
                         </h3>
                         <p>
-                            <%= simple_format(sanitize post.body) %>
+                            <%= sanitize post.body %>
                         </p>
                         <p>
                             <em>posted <%= post.created_at.strftime("%B %e, %Y")%></em>
@@ -86,7 +86,7 @@
                                 <%= show.date.strftime("%A, %B %e, at %l:%M %P") %>
                             </h3>
                             <p>
-                                <%= show.description %>
+                                <%= sanitize show.description %>
                             </p>
                         </div>
                     <% end %>
