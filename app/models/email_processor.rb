@@ -6,6 +6,7 @@ class EmailProcessor
   def process
     to_address = @email.to[0][:email]
     content = @email.raw_html
+    content.gsub!(/(<span[^>]+class\s*=\s*("|')highlight\2[^>]*>)[^<]*(</span>))/, '')
     if to_address == "lastnews@mctrenching.com"
       @post = Post.last
       @post.update(
