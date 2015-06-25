@@ -7,7 +7,7 @@ class EmailProcessor
     to_address = @email.to[0][:email]
     content = @email.raw_html
     if to_address == "lastnews@mctrenching.com"
-      if @email.from[0][:email] == "trenching@gmail.com"
+      if @email.from[:email] == "trenching@gmail.com"
         @post = Post.last
         @post.update(
           headline: @email.subject,
@@ -21,7 +21,7 @@ class EmailProcessor
         description: content
       )
     elsif to_address == "news@mctrenching.com"
-      if @email.from[0][:email] == "trenching@gmail.com"
+      if @email.from[:email] == "trenching@gmail.com"
         @post = Post.last
         @post.update(
           headline: @email.subject,
