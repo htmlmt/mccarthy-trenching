@@ -86,7 +86,7 @@
                                 <%= show.date.strftime("%A, %B %e, at %l:%M %P") %>
                             </h3>
                             <p>
-                                <%= show.description.html_safe %>
+                                <%= sanitize show.description, tags: %w(br i strong em a), attributes: %w(href) %>
                             </p>
                         </div>
                     <% end %>
