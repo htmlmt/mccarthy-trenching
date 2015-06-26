@@ -71,9 +71,9 @@ $codeFont: 'Source Code Pro', monospace;
 
 // Links
 $linkColor: $white;
-$linkHover: $siteBlue;
-$linkVisited: darken($linkColor,10%);
-$linkFocus: darken($linkColor,15%);
+$linkHover: $white;
+$linkVisited: $white;
+$linkFocus: $white;
 $linkWeight: bold;
 
 // Forms
