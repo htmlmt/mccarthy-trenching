@@ -49,7 +49,7 @@
                             <%= post.headline %>
                         </h3>
                         <p>
-                            <%= sanitize post.body, tags: %w(br i strong em a), attributes: %w(href) %>
+                            <%= sanitize post.body, tags: %w(br i strong em a b), attributes: %w(href) %>
                         </p>
                         <p>
                             <em>posted <%= post.created_at.strftime("%B %e, %Y")%></em>
@@ -86,7 +86,7 @@
                                 <%= show.date.strftime("%A, %B %e, at %l:%M %P") %>
                             </h3>
                             <p>
-                                <%= sanitize show.description, tags: %w(br i strong em a), attributes: %w(href) %>
+                                <%= sanitize show.description, tags: %w(br i strong em a b), attributes: %w(href) %>
                             </p>
                         </div>
                     <% end %>

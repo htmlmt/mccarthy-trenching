@@ -83,6 +83,16 @@ function setupDom() {
 
     // Run doOnScroll once in case some elements are in viewport onload
     setTimeout(function() { doOnScroll(); }, 1000);
+    
+    var navItems = $('.nav--container_link');
+    navItems.click(function(){
+        var section = $(".main--" + $(this).text().trim());
+        var sectionTop = section.offset().top;
+        var body = $("html, body");
+        
+        body.animate({scrollTop:sectionTop}, 1000, 'easeInOutQuint', function () {
+        });
+    });
 }
 
 function resizeDom() {

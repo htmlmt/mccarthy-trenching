@@ -33,6 +33,8 @@ gem 'griddler'
 
 gem 'griddler-sendgrid'
 
+gem 'jquery-ui-rails'
+
 gem 'pry-remote'
 
 # Use Capistrano for deployment
