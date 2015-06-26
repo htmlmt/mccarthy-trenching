@@ -19,11 +19,10 @@ class EmailProcessor
         description: content
       )
     elsif to_address == "news@mctrenching.com"
-        @post = Post.last
-        @post.update(
-          headline: @email.subject,
-          body: content
-        )
+      Post.create!(
+        headline: @email.subject,
+        body: content
+      )
     elsif to_address == "shows@mctrenching.com"
       Show.create!(
         date: DateTime.parse(@email.subject),
