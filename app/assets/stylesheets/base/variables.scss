@@ -70,8 +70,8 @@ $headingTextShadow: none;
 $codeFont: 'Source Code Pro', monospace;
 
 // Links
-$linkColor: $siteBlue;
-$linkHover: $siteDarkBlue;
+$linkColor: $white;
+$linkHover: $siteBlue;
 $linkVisited: darken($linkColor,10%);
 $linkFocus: darken($linkColor,15%);
 $linkWeight: bold;
