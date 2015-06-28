@@ -13,11 +13,60 @@
 .music--header {
     background-color: $siteBlack;
     left: 0;
+    z-index: 100;
 }
 
 .music--content {
     padding: 5rem 3rem;
     margin-left: auto;
+    position: relative;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+
+.music--content.move-left {
+    @include transform-translate(-100%, 0);
+}
+
+.music--content_post {
+    max-width: 475px;
+}
+
+.music--content_post--container {
+    @include flexbox();
+    @include flexbox-align-items(flex-start);
+    @include flexbox-justify-content(space-between);
+}
+
+.container--tracklist {
+    width: 45%;
+    margin-right: 5%;
+}
+
+.container--cover {
+    width: 35%;
+}
+
+.container--tracklist span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cover--image {
+    margin-bottom: .5rem;
+    border: 1px solid $siteBlack;
+    padding-bottom: 1px;
+}
+
+.container--cover p {
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.music--content_lyrics h3,
+.music--content_lyrics p {
+    color: $siteBlack;
 }
 
 .music--header h2 {
@@ -42,4 +91,41 @@
     bottom: 2rem;
     left: 0;
     right: 0;
+}
+
+.music--content hr {
+    background-color: $black;
+}
+
+.music--content_post h3,
+.music--content_post p {
+    color: $black;
+}
+
+.lyrics--button {
+    width: 50%;
+    position: fixed;
+    bottom: -40px;
+    transition-duration: .5s;
+    text-align: center;
+    background-color: $siteBlue;
+    color: $white;
+    padding: .5rem 1rem;
+    left: 50%;
+    font-family: 'hwt-american-shopworn';
+    cursor: pointer;
+}
+
+.lyrics--button.show {
+    bottom: 0px;
+}
+
+.music--button {
+    background-color: $siteBlue;
+    font-family: 'hwt-american-shopworn';
+    padding: .5rem 1rem;
+    text-align: center;
+    color: $white;
+    cursor: pointer;
+    margin-top: 1rem;
 }

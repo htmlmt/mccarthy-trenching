@@ -66,7 +66,7 @@ $(window).resize(function(){
 
 function setupDom() {
     // Get all elements that need animation
-    var elements = document.querySelectorAll('.news--content, .shows--content, .music--content'),
+    var elements = document.querySelectorAll('.news--content, .shows--content, .music--content, .music--content_lyrics'),
     // This is a holder for each element object.
         element = {};
 
@@ -119,21 +119,32 @@ var animations = {
         // Loop through array of elements and test each one to see if it's within viewport
         // If so, animate     
         this.elements.forEach(function(element, index, array) {
-            var section = $('.section--header')[index];
+            if (element.element.hasClass('music--content_lyrics')) {
+                
+                var returnToAlbums = $('.lyrics--button');
+                
+                if (element.top > (scrollTop + window.innerHeight)) {
+                    returnToAlbums.removeClass('show');
+                } else if(element.top < (scrollTop + window.innerHeight)) {
+                    returnToAlbums.addClass('show');
+                }
+            } else {
+                var section = $('.section--header')[index];
             
-            if (element.top + element.element.offsetHeight < scrollTop + window.innerHeight) {
-                section.style.position = 'absolute';
-                section.style.bottom = 0;
-                section.style.top = 'auto';
-            } else if(element.top < scrollTop) {
-                section.style.position = 'fixed';
-                section.style.top = 0;
-                section.style.left = 0;
-                element.element.style.marginLeft = 'auto';
-            } else if(element.top > scrollTop) {
-                section.style.position = 'absolute';
-                section.style.top = 0;
-                section.style.bottom = 'auto';
+                if (element.top + element.element.offsetHeight < scrollTop + window.innerHeight) {
+                    section.style.position = 'absolute';
+                    section.style.bottom = 0;
+                    section.style.top = 'auto';
+                } else if(element.top < scrollTop) {
+                    section.style.position = 'fixed';
+                    section.style.top = 0;
+                    section.style.left = 0;
+                    element.element.style.marginLeft = 'auto';
+                } else if(element.top > scrollTop) {
+                    section.style.position = 'absolute';
+                    section.style.top = 0;
+                    section.style.bottom = 'auto';
+                }
             }
         });
     }
